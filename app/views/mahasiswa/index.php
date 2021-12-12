@@ -3,6 +3,7 @@
         <div class="col-lg-6">
         <?php Flasher::flash(); ?>
         </div>
+        
     </div>
     <div class="row mb-3">
       <div class="col-lg-6">
@@ -31,14 +32,13 @@
             <h3>Daftar Mahasiswa</h3>
                     <ul class="list-group">
                     <?php foreach ($data['mhs'] as $mhs) :  ?>
-                <li class="list-group-item ">
+                <li class="list-group-item hapusss ">
                     <?= $mhs['nama']; ?>
-                    <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-2" onclick="return confirm('yakin?');">Hapus</a>
+                    <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-2 tombol-hapus">Hapus</a>
                     <a href="<?= BASEURL; ?>/mahasiswa/ubah/<?= $mhs['id']; ?>" class="badge badge-warning float-right ml-2 tampilModalUbah" data-toggle="modal" data-target="#formModal" data-id="<?= $mhs['id']; ?>">Edit</a>
                     <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right ml-2">Detail</a>
                 </li>
                 <?php endforeach; ?>
-                    </ul>
 
     </div>
 </div>
